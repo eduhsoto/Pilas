@@ -1,10 +1,22 @@
 package com.company;
 
+
 public class Pilas {
     private Nodo top;
-
+    private int size;
+//Método para mostrar el menú.
+    public void Menu() {
+        System.out.println("\nElija una opción: \n" +
+                "1.-Insertar\n" +
+                "2.-Mostrar\n" +
+                "3.-Buscar\n" +
+                "4.-Eliminar\n" +
+                "5.-Contar\n" +
+                "6.-Terminar");
+    }
     public Pilas(){
         top = null;
+        size = 0;
     }
 
     public boolean vacia(){
@@ -21,12 +33,15 @@ public class Pilas {
            nuevoNodo.setProx(top);
            top = nuevoNodo;
        }
+	size++;
     }
-
+    public int Size(){
+	return size;
+    }
     public void peek(){
         Nodo temp = top;
         if (temp !=null){
-            System.out.println("La pila es:");
+            System.out.println("La pila es: ");
             while (temp!=null){
                 System.out.println(temp.getValor());
                 temp = temp.getProx();
@@ -65,6 +80,7 @@ public class Pilas {
         }else{
             System.out.println("La pila esta vacía");
         }
+	size--;
     }
 
 
