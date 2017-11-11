@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        boolean stop = false;
+        boolean stop = true;
         Pilas pila = new Pilas();
         int opcion;
         Scanner scanner = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class Main {
         do{
             //Muestra el menú al usuario
             System.out.println("1) Insertar\n2) Mostrar\n3) Buscar\n4) Eliminar\n5)" +
-                    " Tamaño\n6) Máximo\n7) Mínimo\n8) Terminar\n ¿Cuál es tu opción?");
+                    " Tamaño\n6) Máximo\n7) Mínimo\n8) Terminar\n Elije una opción");
             //captura la opción del usuario
             opcion=scanner.nextInt();
             switch (opcion){
@@ -62,10 +62,14 @@ public class Main {
                     break;
                 case 8:
                     //Termina el ciclo del menú y por lo tanto finaliza el programa
+                    stop = false;
                     System.out.println("Vuelve pronto");
                     break;
+
+                default:
+                    System.out.println("Opción incorrecta");
             }
-        }while (opcion!=8 );
+        }while (stop!=false );
 
     }
 }
