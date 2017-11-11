@@ -11,7 +11,7 @@ public class Main {
         Pilas pila = new Pilas();
         int opcion;
         Scanner scanner = new Scanner(System.in);
-        
+
         do{
             //Muestra el menú al usuario
             System.out.println("1) Insertar\n2) Mostrar\n3) Buscar\n4) Eliminar\n5)" +
