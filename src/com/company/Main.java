@@ -76,7 +76,7 @@ public class Main {
 
                     System.out.println("El tamaño  de la pila es " + pila.Size());
 
-                    System.out.println("El tamaño de la pila es " + pila.Size());
+                   
 
                     break;
                 case 6:
@@ -97,7 +97,7 @@ public class Main {
 
                     System.out.println("Opción incorrecta");
 
-                    System.out.println("Opción incorrecta"+ pila.mayor());
+
 
             }
         }while (stop!=false );
