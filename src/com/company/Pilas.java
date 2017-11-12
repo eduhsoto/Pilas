@@ -29,30 +29,21 @@ public class Pilas {
     }
     public int Size(){
 
-<<<<<<< HEAD
             return size;
 
     }
 
-    public void peek(){
-        int contador = 0;
-=======
-        return size;
-    }
 
     public void peek(){
         int contador=0;
->>>>>>> origin/max_min
+
         Nodo temp = top;
         if (temp !=null){
             while (temp!=null){
                 System.out.println("Valor: " + temp.getValor() + " Posición:" + contador);
                 temp = temp.getProx();
                 contador++;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/max_min
             }
         }else {
             System.out.println("Pila vacía");
@@ -77,11 +68,11 @@ public class Pilas {
                 temp = temp.getProx();
                 contador++;
             }
-<<<<<<< HEAD
+
             System.out.println("El valor fue encontrado " + valor + " ubicabo en la posición " + contador);
-=======
+
             System.out.println("El valor " + valor + " fue encontrado y está ubicabo en la posición " + contador);
->>>>>>> origin/max_min
+
         } else {
             System.out.println("Pila vacía");
         }
