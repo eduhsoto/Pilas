@@ -5,15 +5,6 @@ public class Pilas {
     private Nodo top;
     private int size;
 //Método para mostrar el menú.
-    public void Menu() {
-        System.out.println("\nElija una opción: \n" +
-                "1.-Insertar\n" +
-                "2.-Mostrar\n" +
-                "3.-Buscar\n" +
-                "4.-Eliminar\n" +
-                "5.-Contar\n" +
-                "6.-Terminar");
-    }
     public Pilas(){
         top = null;
         size = 0;
@@ -36,15 +27,20 @@ public class Pilas {
 	size++;
     }
     public int Size(){
-	return size;
+
+            return size;
+
     }
+
     public void peek(){
+        int contador = 0;
         Nodo temp = top;
         if (temp !=null){
-            System.out.println("La pila es: ");
             while (temp!=null){
-                System.out.println(temp.getValor());
+                System.out.println("Valor: " + temp.getValor() + " Posición:" + contador);
                 temp = temp.getProx();
+                contador++;
+
             }
         }else {
             System.out.println("Pila vacía");
@@ -59,18 +55,38 @@ public class Pilas {
         }
     }
 
+    //Método buscar por valor
     public void searchValue(int valor) {
+        int contador=0;
         Nodo temp = top;
 
         if (!vacia()) {
             while (temp.getValor() != valor) {
                 temp = temp.getProx();
+                contador++;
             }
-            System.out.println("El valor es " + valor);
+            System.out.println("El valor fue encontrado " + valor + " ubicabo en la posición " + contador);
         } else {
             System.out.println("Pila vacía");
         }
     }
+
+    //Método buscar por índice
+    public void searchIndex(int index) {
+        int contador = 0;
+        Nodo temp = top;
+        if (!vacia()) {
+            while (contador < index) {
+                temp = temp.getProx();
+                contador++;
+            }
+            System.out.println("En la posición  " + contador + " se encuentra el valor  " + temp.getValor() + "\n");
+        }
+        else{
+            System.out.println("La pila esta vacia");
+        }
+    }
+
 
 
     public void pop(){
