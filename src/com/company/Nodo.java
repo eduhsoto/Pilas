@@ -15,6 +15,7 @@ public class Nodo {
     }
 
     public void setValor(int v){
+
         valor = v;
     }
 

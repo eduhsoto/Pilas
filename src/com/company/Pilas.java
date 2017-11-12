@@ -11,6 +11,7 @@ public class Pilas {
     }
 
     public boolean vacia(){
+
         return (top == null);
     }
 
@@ -28,19 +29,30 @@ public class Pilas {
     }
     public int Size(){
 
+<<<<<<< HEAD
             return size;
 
     }
 
     public void peek(){
         int contador = 0;
+=======
+        return size;
+    }
+
+    public void peek(){
+        int contador=0;
+>>>>>>> origin/max_min
         Nodo temp = top;
         if (temp !=null){
             while (temp!=null){
                 System.out.println("Valor: " + temp.getValor() + " Posición:" + contador);
                 temp = temp.getProx();
                 contador++;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/max_min
             }
         }else {
             System.out.println("Pila vacía");
@@ -65,7 +77,11 @@ public class Pilas {
                 temp = temp.getProx();
                 contador++;
             }
+<<<<<<< HEAD
             System.out.println("El valor fue encontrado " + valor + " ubicabo en la posición " + contador);
+=======
+            System.out.println("El valor " + valor + " fue encontrado y está ubicabo en la posición " + contador);
+>>>>>>> origin/max_min
         } else {
             System.out.println("Pila vacía");
         }
@@ -97,6 +113,53 @@ public class Pilas {
             System.out.println("La pila esta vacía");
         }
 	size--;
+    }
+
+    public int menor(){
+        int pila[]=new int[Size()];
+        Nodo temp=top;
+        while (temp!=null){
+            for (int i=0; i<Size(); i++){
+                pila[i]=temp.getValor();
+                temp=temp.getProx();
+            }
+        }
+        int [] ordenado= BurbujaMejorada(pila);
+        return ordenado[0];
+
+    }
+    public int mayor(){
+        int pila[]=new int[Size()];
+        Nodo temp=top;
+        while (temp!=null){
+            for (int i=0; i<Size(); i++){
+                pila[i]=temp.getValor();
+                temp=temp.getProx();
+            }
+
+            //System.out.println(Arrays.toString(pila));
+        }
+        int[]ordenado=BurbujaMejorada(pila);
+        return ordenado[Size()-1];
+    }
+
+    public static int[] BurbujaMejorada(int[] pila) {
+        int buffer;
+        int i,j;
+        for(i = 0; i < pila.length; i++)
+        {
+            for(j = 0; j < i; j++)
+            {
+                if(pila[i] < pila[j])
+                {
+                    buffer = pila[j];
+                    pila[j] = pila[i];
+                    pila[i] = buffer;
+                }
+            }
+        }
+        return pila;
+
     }
 
 

@@ -44,7 +44,11 @@ public class Main {
                 case 3:
                     //Opción que llama al método de búsqueda\n
                     if (!pila.vacia()) {//Se agrega el método de búsqueda
+<<<<<<< HEAD
                         System.out.println("Elija el tipo de búsqueda\nPor valor\nPor índice");
+=======
+                        System.out.println("Elija el tipo de búsqueda\n1) Por valor\n2) Por índice");
+>>>>>>> origin/max_min
                         int op = scanner.nextInt();
                         if (op == 1) {
                             System.out.println("Ingrese un valor");
@@ -69,15 +73,19 @@ public class Main {
                     break;
                 case 5:
                     //Esta opción devuelve el tamaño de la pila
+<<<<<<< HEAD
                     System.out.println("El tamaño  de la pila es " + pila.Size());
+=======
+                    System.out.println("El tamaño de la pila es " + pila.Size());
+>>>>>>> origin/max_min
                     break;
                 case 6:
                     //Por el contrario, esta opción devuelve el valor máximo de la pila
-                    System.out.println("Valor máximo: ");
+                    System.out.println("Valor máximo: " + pila.mayor());
                     break;
                 case 7:
                     //Devuelve el valor mínimo de la pila
-                    System.out.println("Valor mínimo: ");
+                    System.out.println("Valor mínimo: " + pila.menor());
                     break;
                 case 8:
                     //Termina el ciclo del menú y por lo tanto finaliza el programa
@@ -86,7 +94,11 @@ public class Main {
                     break;
 
                 default:
+<<<<<<< HEAD
                     System.out.println("Opción incorrecta");
+=======
+                    System.out.println("Opción incorrecta"+ pila.mayor());
+>>>>>>> origin/max_min
             }
         }while (stop!=false );
 
