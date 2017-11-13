@@ -69,9 +69,8 @@ public class Pilas {
                 contador++;
             }
 
-            System.out.println("El valor fue encontrado " + valor + " ubicabo en la posición " + contador);
-
-            System.out.println("El valor " + valor + " fue encontrado y está ubicabo en la posición " + contador);
+            System.out.println("El valor fue encontrado  ubicabo en la posición " + contador);
+            
 
         } else {
             System.out.println("Pila vacía");
