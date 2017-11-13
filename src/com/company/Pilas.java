@@ -11,31 +11,46 @@ public class Pilas {
 
     //Método que devuelve nulo == la vista esta vacía.
     public boolean vacia(){
-
         return (top == null);
     }
 
+<<<<<<< HEAD
 
+=======
+    //Método para agregar un nuevo elemento a la lista
+>>>>>>> comment
     public void push(int value){
        Nodo nuevoNodo;
 
        if (vacia()){//Si la lista esta vacía, agregamos el valor a la cima
            top = new Nodo(value);
        }else{
+<<<<<<< HEAD
            nuevoNodo = new Nodo(value);
            nuevoNodo.setProx(top);//El nuevo valor pasa a ser la cima
+=======
+           nuevoNodo = new Nodo(value);//El nuevo valor pasa a ser la cima
+           nuevoNodo.setProx(top);
+>>>>>>> comment
            top = nuevoNodo;
        }
 	size++;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> comment
     public int Size(){//Devolvemos el tamaño de la lista
             return size;
     }
 
-
+    //Método para buscar un valor
     public void peek(){
         int contador=0;//Variable para determinar la posición
+<<<<<<< HEAD
+=======
+
+>>>>>>> comment
         Nodo temp = top;
         if (temp !=null){//Si no esta vacía
             while (temp!=null){//Recorremos
@@ -93,8 +108,7 @@ public class Pilas {
         }
     }
 
-
-
+    //Método para eliminar el primmer valor
     public void pop(){
         if (!vacia()){
             System.out.println("Datos extraido: " + top.getValor());
