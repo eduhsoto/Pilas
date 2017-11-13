@@ -70,13 +70,14 @@ public class Main {
                     /*
                     Opción que invoca al método que elimina un elemento
                      */
+                    pila.pop();
                     break;
                 case 5:
                     //Esta opción devuelve el tamaño de la pila
 
                     System.out.println("El tamaño  de la pila es " + pila.Size());
 
-                   
+
 
                     break;
                 case 6:
