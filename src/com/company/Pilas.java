@@ -3,62 +3,63 @@ public class Pilas {
     //Declaramos la variable top, será el inicio de la pila.
     private Nodo top;
     private int size;
-//Método para mostrar el menú.
-    public Pilas(){
+
+    public Pilas() {
         top = null;
         size = 0;
     }
 
     //Método que devuelve nulo == la vista esta vacía.
-    public boolean vacia(){
+    public boolean vacia() {
         return (top == null);
     }
 
     //Método para agregar un nuevo elemento a la lista
-    public void push(int value){
-       Nodo nuevoNodo;
+    public void push(int value) {
+        Nodo nuevoNodo;
 
-       if (vacia()){//Si la lista esta vacía, agregamos el valor a la cima
-           top = new Nodo(value);
-       }else{
-           nuevoNodo = new Nodo(value);//El nuevo valor pasa a ser la cima
-           nuevoNodo.setProx(top);
-           top = nuevoNodo;
-       }
-	size++;
+        if (vacia()) {//Si la lista esta vacía, agregamos el valor a la cima
+            top = new Nodo(value);
+        } else {
+            nuevoNodo = new Nodo(value);//El nuevo valor pasa a ser la cima
+            nuevoNodo.setProx(top);
+            top = nuevoNodo;
+        }
+        size++;
     }
-    public int Size(){//Devolvemos el tamaño de la lista
-            return size;
+
+    public int Size() {//Devolvemos el tamaño de la lista
+        return size;
     }
 
     //Método para buscar un valor
-    public void peek(){
-        int contador=0;//Variable para determinar la posición
+    public void peek() {
+        int contador = 0;//Variable para determinar la posición
 
         Nodo temp = top;
-        if (temp !=null){
-            while (temp!=null){
+        if (temp != null) {
+            while (temp != null) {
                 System.out.println("Valor: " + temp.getValor() + " Posición:" + contador);
                 temp = temp.getProx();
                 contador++;
 
             }
-        }else {
+        } else {
             System.out.println("Pila vacía");
         }
     }
 
-    public void cima(){//Buscar
-        if (!vacia()){
+    public void cima() {//Buscar
+        if (!vacia()) {
             System.out.println("Cima: " + top.getValor());
-        }else {
+        } else {
             System.out.println("La pila esta vacía");
         }
     }
 
     //Método buscar por valor
     public void searchValue(int valor) {
-        int contador=0;
+        int contador = 0;
         Nodo temp = top;
 
         if (!vacia()) {
@@ -86,23 +87,23 @@ public class Pilas {
                 contador++;
             }
             System.out.println("En la posición  " + contador + " se encuentra el valor  " + temp.getValor() + "\n");
-        }
-        else{
+        } else {
             System.out.println("La pila esta vacia");
         }
     }
 
     //Método para eliminar el primmer valor
-    public void pop(){
-        if (!vacia()){
+    public void pop() {
+        if (!vacia()) {
             System.out.println("Datos extraido: " + top.getValor());
             top = top.getProx();
-        }else{
+        } else {
             System.out.println("La pila esta vacía");
         }
-	size--;
+        size--;
     }
 
+    //Método para obtener el menor de la pila
     public int menor(){
         int pila[]=new int[Size()];
         Nodo temp=top;
@@ -116,6 +117,8 @@ public class Pilas {
         return ordenado[0];
 
     }
+
+    //Método para obtener el mayor de la pila
     public int mayor(){
         int pila[]=new int[Size()];
         Nodo temp=top;
