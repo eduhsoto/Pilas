@@ -1,6 +1,4 @@
 package com.company;
-
-
 import java.util.Scanner;
 
 public class Main {
@@ -29,10 +27,10 @@ public class Main {
                         System.out.print("Teclee el elemento["+i+"]");
                         //captura el valor ingresado
                         int valor=scanner.nextInt();
-<<<<<<< HEAD
-=======
-                        //obj=valor; --- Angélica no es necesario hacer esto. No estas conviertiendo nada, solo estas asignando valor a la variable declarada
->>>>>>> comment
+
+                        //obj=valor; --- Angélica no es necesario hacer esto. No estas conviertiendo nada,
+                        // solo estas asignando valor a la variable declarada
+
                         pila.push(valor);
                     }
                     break;
