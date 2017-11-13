@@ -1,7 +1,6 @@
 package com.company;
-
-
 public class Pilas {
+    //Declaramos la variable top, será el inicio de la pila.
     private Nodo top;
     private int size;
 //Método para mostrar el menú.
@@ -10,32 +9,31 @@ public class Pilas {
         size = 0;
     }
 
+    //Método que devuelve nulo == la vista esta vacía.
     public boolean vacia(){
-
         return (top == null);
     }
 
+    //Método para agregar un nuevo elemento a la lista
     public void push(int value){
        Nodo nuevoNodo;
 
-       if (vacia()){
+       if (vacia()){//Si la lista esta vacía, agregamos el valor a la cima
            top = new Nodo(value);
        }else{
-           nuevoNodo = new Nodo(value);
+           nuevoNodo = new Nodo(value);//El nuevo valor pasa a ser la cima
            nuevoNodo.setProx(top);
            top = nuevoNodo;
        }
 	size++;
     }
-    public int Size(){
-
+    public int Size(){//Devolvemos el tamaño de la lista
             return size;
-
     }
 
-
+    //Método para buscar un valor
     public void peek(){
-        int contador=0;
+        int contador=0;//Variable para determinar la posición
 
         Nodo temp = top;
         if (temp !=null){
@@ -94,8 +92,7 @@ public class Pilas {
         }
     }
 
-
-
+    //Método para eliminar el primmer valor
     public void pop(){
         if (!vacia()){
             System.out.println("Datos extraido: " + top.getValor());
