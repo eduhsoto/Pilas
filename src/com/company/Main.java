@@ -25,15 +25,8 @@ public class Main {
                     for (int i=1; i<=num; i++) {
                         System.out.print("Teclee el elemento[" + i + "]");
                         //captura el valor ingresado
-<<<<<<< HEAD
-                        int valor=scanner.nextInt();
 
-                        //obj=valor; --- Angélica no es necesario hacer esto. No estas conviertiendo nada,
-                        // solo estas asignando valor a la variable declarada
-
-=======
                         int valor = scanner.nextInt();
->>>>>>> comment
                         pila.push(valor);
                     }
                     break;

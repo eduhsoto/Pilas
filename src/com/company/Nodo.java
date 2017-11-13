@@ -5,11 +5,7 @@ public class Nodo {
     private int valor;
     private Nodo prox;
 
-<<<<<<< HEAD
     //Contructor
-=======
-    //Método contructor
->>>>>>> comment
     public Nodo(){
         this.valor = 0;
         this.prox = null;

@@ -4,11 +4,8 @@ public class Pilas {
     private Nodo top;
     private int size;
 
-<<<<<<< HEAD
-    public Pilas(){
-=======
+
     public Pilas() {
->>>>>>> comment
         top = null;
         size = 0;
     }
@@ -19,36 +16,6 @@ public class Pilas {
     }
 
     //Método para agregar un nuevo elemento a la lista
-<<<<<<< HEAD
-    public void push(int value){
-       Nodo nuevoNodo;
-
-       if (vacia()){//Si la lista esta vacía, agregamos el valor a la cima
-           top = new Nodo(value);
-       }else{
-
-           nuevoNodo = new Nodo(value);
-           nuevoNodo.setProx(top);//El nuevo valor pasa a ser la cima
-
-           nuevoNodo = new Nodo(value);//El nuevo valor pasa a ser la cima
-           nuevoNodo.setProx(top);
-
-           top = nuevoNodo;
-       }
-	size++;
-    }
-
-    public int Size(){//Devolvemos el tamaño de la lista
-            return size;
-    }
-
-    //Método para mostrar los valores
-    public void peek(){
-        int contador=0;//Variable para determinar la posición
-        Nodo temp = top;
-        if (temp !=null){//Si no esta vacía
-            while (temp!=null){//Recorremos
-=======
     public void push(int value) {
         Nodo nuevoNodo;
 
@@ -73,7 +40,6 @@ public class Pilas {
         Nodo temp = top;
         if (temp != null) {
             while (temp != null) {
->>>>>>> comment
                 System.out.println("Valor: " + temp.getValor() + " Posición:" + contador);
                 temp = temp.getProx();
                 contador++;
@@ -138,11 +104,7 @@ public class Pilas {
         size--;
     }
 
-<<<<<<< HEAD
-    //Método para determinarl el menor de la pila
-=======
     //Método para obtener el menor de la pila
->>>>>>> comment
     public int menor(){
         int pila[]=new int[Size()];
         Nodo temp=top;
@@ -156,11 +118,7 @@ public class Pilas {
         return ordenado[0];
     }
 
-<<<<<<< HEAD
-    //Método para determinarl el mayor de la pila
-=======
     //Método para obtener el mayor de la pila
->>>>>>> comment
     public int mayor(){
         int pila[]=new int[Size()];
         Nodo temp=top;
