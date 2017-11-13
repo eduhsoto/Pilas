@@ -1,45 +1,44 @@
 package com.company;
-
-
 public class Pilas {
+    //Declaramos la variable top, será el inicio de la pila.
     private Nodo top;
     private int size;
-//Método para mostrar el menú.
+
     public Pilas(){
         top = null;
         size = 0;
     }
 
+    //Método que devuelve nulo == la vista esta vacía.
     public boolean vacia(){
 
         return (top == null);
     }
 
+
     public void push(int value){
        Nodo nuevoNodo;
 
-       if (vacia()){
+       if (vacia()){//Si la lista esta vacía, agregamos el valor a la cima
            top = new Nodo(value);
        }else{
            nuevoNodo = new Nodo(value);
-           nuevoNodo.setProx(top);
+           nuevoNodo.setProx(top);//El nuevo valor pasa a ser la cima
            top = nuevoNodo;
        }
 	size++;
     }
-    public int Size(){
 
+    public int Size(){//Devolvemos el tamaño de la lista
             return size;
-
     }
 
 
     public void peek(){
-        int contador=0;
-
+        int contador=0;//Variable para determinar la posición
         Nodo temp = top;
-        if (temp !=null){
-            while (temp!=null){
+        if (temp !=null){//Si no esta vacía
+            while (temp!=null){//Recorremos
                 System.out.println("Valor: " + temp.getValor() + " Posición:" + contador);
                 temp = temp.getProx();
                 contador++;
@@ -106,6 +105,7 @@ public class Pilas {
 	size--;
     }
 
+    //Método para determinarl el menor de la pila
     public int menor(){
         int pila[]=new int[Size()];
         Nodo temp=top;
@@ -117,8 +117,9 @@ public class Pilas {
         }
         int [] ordenado= BurbujaMejorada(pila);
         return ordenado[0];
-
     }
+
+    //Método para determinarl el mayor de la pila
     public int mayor(){
         int pila[]=new int[Size()];
         Nodo temp=top;

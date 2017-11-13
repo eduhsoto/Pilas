@@ -24,16 +24,11 @@ public class Main {
                     System.out.println("Teclee la cantidad de elementos de la pila: ");
                     //captura el número que ingreso
                     int num=scanner.nextInt();
-                    //int obj; -- No es necesario declarar otra variable
                     //Realiza un ciclo que determine que elemento se ingresará
                     for (int i=1; i<=num; i++){
                         System.out.print("Teclee el elemento["+i+"]");
                         //captura el valor ingresado
                         int valor=scanner.nextInt();
-                        /*
-                        Dado que el método push requiere de un objeto se convierte el valor ingresado
-                         y se llama al mismo método*/
-                        //obj=valor; --- Angélica no es necesario hacer esto. No estas conviertiendo nada, solo estas asignando valor a la variable declarada
                         pila.push(valor);
                     }
                     break;
@@ -44,11 +39,7 @@ public class Main {
                 case 3:
                     //Opción que llama al método de búsqueda\n
                     if (!pila.vacia()) {//Se agrega el método de búsqueda
-
-                        System.out.println("Elija el tipo de búsqueda\nPor valor\nPor índice");
-
                         System.out.println("Elija el tipo de búsqueda\n1) Por valor\n2) Por índice");
-
                         int op = scanner.nextInt();
                         if (op == 1) {
                             System.out.println("Ingrese un valor");
@@ -67,18 +58,12 @@ public class Main {
                     }
                     break;
                 case 4:
-                    /*
-                    Opción que invoca al método que elimina un elemento
-                     */
+                    //Opción que invoca al método que elimina un elemento
                     pila.pop();
                     break;
                 case 5:
                     //Esta opción devuelve el tamaño de la pila
-
                     System.out.println("El tamaño  de la pila es " + pila.Size());
-
-
-
                     break;
                 case 6:
                     //Por el contrario, esta opción devuelve el valor máximo de la pila
@@ -95,11 +80,7 @@ public class Main {
                     break;
 
                 default:
-
                     System.out.println("Opción incorrecta");
-
-
-
             }
         }while (stop!=false );
 
