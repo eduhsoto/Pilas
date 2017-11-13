@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
         boolean stop = true;//SE agrega la variable stop. iniciando en true.
         Pilas pila = new Pilas();
         int opcion;
@@ -23,14 +22,18 @@ public class Main {
                     //captura el número que ingreso
                     int num=scanner.nextInt();
                     //Realiza un ciclo que determine que elemento se ingresará
-                    for (int i=1; i<=num; i++){
-                        System.out.print("Teclee el elemento["+i+"]");
+                    for (int i=1; i<=num; i++) {
+                        System.out.print("Teclee el elemento[" + i + "]");
                         //captura el valor ingresado
+<<<<<<< HEAD
                         int valor=scanner.nextInt();
 
                         //obj=valor; --- Angélica no es necesario hacer esto. No estas conviertiendo nada,
                         // solo estas asignando valor a la variable declarada
 
+=======
+                        int valor = scanner.nextInt();
+>>>>>>> comment
                         pila.push(valor);
                     }
                     break;
