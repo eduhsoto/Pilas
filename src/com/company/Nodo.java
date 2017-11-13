@@ -5,7 +5,7 @@ public class Nodo {
     private int valor;
     private Nodo prox;
 
-    //Métoco contructor
+    //Contructor
     public Nodo(){
         this.valor = 0;
         this.prox = null;
